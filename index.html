@@ -35,6 +35,8 @@
                 <div class="row">
                     <div class="booking-form">
                         <form>
+                            <!-- Leigh's Code -->
+                            <h2>Flight Details</h2>
                             <div class="row">
                                 <!-- radio buttons -->
                                 <div class="form-group">
@@ -116,113 +118,103 @@
                                     <button class="submit-btn">Book flights</button>
                                 </div>
                             </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="booking-form">
-                    <form>
-                        <div class="row">
-                            <div class="passenger1">
-                                <span><strong>Passenger 1 (Adult)</strong></span>
-                                <div class="full-name">
-                                    <!-- Passenger 1 Name using text input-->
-                                    <label for="passenger1-name">Name: </label>
-                                    <input type="text" name="passenger-name" id="passenger1-name" placeholder="Full Name" required >
+                            <h2>Passenger Details</h2>
+                            <!-- lekshmi's Code -->
+                            <div class="row">
+                                <div class="passenger1">
+                                    <span><strong>Passenger 1 (Adult)</strong></span>
+                                    <div class="full-name">
+                                        <!-- Passenger 1 Name using text input-->
+                                        <label for="passenger1-name">Name: </label>
+                                        <input type="text" name="passenger-name" id="passenger1-name" placeholder="Full Name" required >
+                                    </div>
+                                </div>
+                                <!-- Passenger1 gender using radio button input-->
+                                <div class="gender">
+                                    <label for="Male1">Male</label>
+                                    <input id="Male1" type="radio" name="Male" value="Male">
+                                    <label for="Female1">Female</label>
+                                    <input id="Female1" type="radio" name="Female" value="Female">
+                                </div>
+                                <!-- Passenger 1 age using number input-->
+                                <div class="age">  
+                                    <label for="age1">Age</label>
+                                    <input id="age1" type="number" step="1" name="age"  placeholder="18+" required min="18" max="100">
+                                </div>
+                                <!-- Passenger 1 foodtype using dropdown input-->
+                                <div class="foodtype">
+                                    <label for="foodtype1">Food Type:</label>
+                                    <select id="foodtype1" name="foodtype">
+                                        <option value="veg">Vegetarian</option>
+                                        <option value="nonveg">Non-Vegetarian</option>
+                                    </select>
                                 </div>
                             </div>
-                            <!-- Passenger1 gender using radio button input-->
-                            <div class="gender">
-                                <label for="Male1">Male</label>
-                                <input id="Male1" type="radio" name="Male" value="Male">
-                                <label for="Female1">Female</label>
-                                <input id="Female1" type="radio" name="Female" value="Female">
+                            <div class="row">
+                                <!-- Passenger 2 Information-->
+                                <div class="passenger2">
+                                    <span><strong>Passenger 2 (Adult)</strong></span>
+                                    <div class="full-name">
+                                    <!-- Passenger 1 Name using text input-->
+                                    <label for="passenger2-name">Name: </label>
+                                    <input type="text" name="passenger-name" id="passenger2-name" placeholder="Full Name" required>
+                                </div>
+                                <!-- Passenger1 gender using radiobutton input-->
+                                <div class="gender">
+                                    <label for="Male2">Male</label>
+                                    <input id="Male2" type="radio" name="Male" value="Male">
+                                    <label for="Female2">Female</label>
+                                    <input id="Female2" type="radio" name="Female" value="Female">
+                                </div>
+                            
+                                <!-- Passenger 1 age using number input-->
+                                <div class="age">  
+                                    <label for="age2">Age</label>
+                                    <input id="age2" type="number" step="1" name="age"  placeholder="18+" required min="18" max="100">
+                                </div>
+                            
+                                <!-- Passenger 1 foodtype using dropdown input-->
+                                <div class="foodtype"></div>
+                                    <label for="foodtype2">Food Type:</label>
+                                    <select id="foodtype2" name="foodtype">
+                                        <option value="veg">Vegetarian</option>
+                                        <option value="nonveg">Non-Vegetarian</option>
+                                    </select>
+                                </div>
                             </div>
-                            <!-- Passenger 1 age using number input-->
-                            <div class="age">  
-                                <label for="age1">Age</label>
-                                <input id="age1" type="number" step="1" name="age"  placeholder="18+" required min="18" max="100">
-                            </div>
-                            <!-- Passenger 1 foodtype using dropdown input-->
-                            <div class="foodtype">
-                                <label for="foodtype1">Food Type:</label>
-                                <select id="foodtype1" name="foodtype">
+                            <div class="row">
+                                <!-- Passenger 3 Information-->
+                                <div class="passenger3">
+                                    <span><strong>Passenger 3 (Child)</strong></span><br><br>
+                                    <div class="full-name">
+                                    <!-- Passenger 3 Name using text input-->
+                                    <label for="passenger3-name">Name: </label>
+                                    <input type="text" name="passenger-name" id="passenger1-name" placeholder="Full Name" required  minlength="5">
+                                </div>
+                                <!-- Passenger3 gender using radiobutton input-->
+                                <div class="gender">
+                                    <label for="Male3">Male</label>
+                                    <input id="Male3" type="radio" name="Male" value="Male">
+                                    <label for="Female3">Female</label>
+                                    <input id="Female3" type="radio" name="Female" value="Female">
+                                </div>                                
+                                <!-- Passenger 3 age using number input-->
+                                <div class="age">  
+                                    <label for="age3">Age</label>
+                                    <input id="age3" type="number" step="1" name="age"  placeholder="2-11" required min="2" max="11">
+                                    <br><br>
+                                </div>
+                                <!-- Passenger 3 foodtype using dropdown input-->
+                                <div class="foodtype"></div>
+                                <label for="foodtype3">Food Type:</label>
+                                <select id="foodtype3" name="foodtype">
                                     <option value="veg">Vegetarian</option>
                                     <option value="nonveg">Non-Vegetarian</option>
                                 </select>
                             </div>
-                        </div>
-                        <div class="row">
-                            <!-- Passenger 2 Information-->
-                            <div class="passenger2">
-                                <span><strong>Passenger 2 (Adult)</strong></span>
-                                <div class="full-name">
-                                <!-- Passenger 1 Name using text input-->
-                                <label for="passenger2-name">Name: </label>
-                                <input type="text" name="passenger-name" id="passenger2-name" placeholder="Full Name" required>
-                            </div>
-                            <!-- Passenger1 gender using radiobutton input-->
-                            <div class="gender">
-                                <label for="Male2">Male</label>
-                                <input id="Male2" type="radio" name="Male" value="Male">
-                                <label for="Female2">Female</label>
-                                <input id="Female2" type="radio" name="Female" value="Female">
-                            </div>
-                        
-                            <!-- Passenger 1 age using number input-->
-                            <div class="age">  
-                                <label for="age2">Age</label>
-                                <input id="age2" type="number" step="1" name="age"  placeholder="18+" required min="18" max="100">
-                            </div>
-                        
-                            <!-- Passenger 1 foodtype using dropdown input-->
-                            <div class="foodtype"></div>
-                                <label for="foodtype2">Food Type:</label>
-                                <select id="foodtype2" name="foodtype">
-                                    <option value="veg">Vegetarian</option>
-                                    <option value="nonveg">Non-Vegetarian</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <!-- Passenger 3 Information-->
-                            <div class="passenger3">
-                                <span><strong>Passenger 3 (Child)</strong></span><br><br>
-                                <div class="full-name">
-                                <!-- Passenger 3 Name using text input-->
-                                <label for="passenger3-name">Name: </label>
-                                <input type="text" name="passenger-name" id="passenger1-name" placeholder="Full Name" required  minlength="5">
-                            </div>
-                            <!-- Passenger3 gender using radiobutton input-->
-                            <div class="gender">
-                                <label for="Male3">Male</label>
-                                <input id="Male3" type="radio" name="Male" value="Male">
-                                <label for="Female3">Female</label>
-                                <input id="Female3" type="radio" name="Female" value="Female">
-                            </div>                                
-                            <!-- Passenger 3 age using number input-->
-                            <div class="age">  
-                                <label for="age3">Age</label>
-                                <input id="age3" type="number" step="1" name="age"  placeholder="2-11" required min="2" max="11">
-                                <br><br>
-                            </div>
-                            <!-- Passenger 3 foodtype using dropdown input-->
-                            <div class="foodtype"></div>
-                            <label for="foodtype3">Food Type:</label>
-                            <select id="foodtype3" name="foodtype">
-                                <option value="veg">Vegetarian</option>
-                                <option value="nonveg">Non-Vegetarian</option>
-                            </select>
-                        </div>
-                    </form>
-                </div>        
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="booking-form">
-                        <form>
-                            <span>Payment and Contact Details</span>
+
+                            <!-- Sandeep's Code -->
+                            <h2>Payment and Contact Details</h2>
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
