@@ -1,6 +1,7 @@
 .section {
 	position: relative;
 	height: 100vh;
+	overflow: scroll;
 }
 
 .section .section-center {
@@ -14,14 +15,15 @@
 
 #booking {
 	font-family: 'PT Sans', sans-serif;
-	background-image: url('../img/background.jpg');
+	background-image: url("../img/background.jpg");
 	background-size: cover;
 	background-position: center;
+	padding-top: 30px;
 }
 
 .booking-form {
 	background: rgba(0, 0, 0, 0.7);
-	padding: 40px;
+	padding: 10px 40px 40px;
 	border-radius: 6px;
 }
 
@@ -101,6 +103,8 @@
 	position: absolute !important;
 	margin-left: -9999px !important;
 	visibility: hidden !important;
+	display: flex;
+	align-items: center;
 }
 
 .booking-form .form-checkbox label {
