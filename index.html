@@ -31,371 +31,560 @@
 
 <body class="layout">
     <div class="page js-page" id="booking">
-            <div class="wrap container-fluid">
-                <section class="page-section booking-form" id="flight-details">
-                            <form>
-                                <!-- Leigh's Code -->
-                                <div class="row">
-                                    <div class="col-xs-4">
-                                        <div class="box">
-                                            <h2>Flight Details</h2>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <!-- radio buttons -->
-                                    <div class="col-xs-6">
-                                        <div class="box">
-                                            <div class="form-group">
-                                                <div class="form-checkbox">
-                                                    <label for="one-way">
-                                                    <input type="radio" id="one-way" value="one-way" name="flight-type" checked>
-                                                    <span></span>One way 
-                                                    </label>    
-                                                    <label for="return">
-                                                    <input type="radio" id="return" value="return" name="flight-type">
-                                                    <span></span>Return
-                                                    </label>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <span class="form-label">No. of Adults (18+)</span>
-                                            <select class="form-control" id="adults">
-                                                <option value="0">Adults</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                            </select>
-                                            <span class="select-arrow"></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <span class="form-label">No. of Children (0-17)</span>
-                                            <select class="form-control" id="children">
-                                                <option value="0">Children</option>
-                                                <option value="1">1</option>
-                                                <option value="2">2</option>
-                                            </select>
-                                            <span class="select-arrow"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <span class="form-label">Flying from</span>
-                                            <input class="form-control" type="text" placeholder="City or airport">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <span class="form-label">Flying to</span>
-                                            <input class="form-control" type="text" placeholder="City or airport">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <span class="form-label">Departing</span>
-                                            <input class="form-control" type="date" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <span class="form-label">Returning</span>
-                                            <input class="form-control" type="date" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <span class="form-label">Travel class</span>
-                                            <select class="form-control">
-                                                <option>Economy class</option>
-                                                <option>Business class</option>
-                                                <option>First class</option>
-                                            </select>
-                                            <span class="select-arrow"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-btn">
-                                            <button class="submit-btn" id="flight-btn">Book Flight</button>
-                                        </div>
-                                    </div>  
-                                </div>
-                            </form>
-                    </section>
-                    <section class="page-section booking-form" id="passenger-details">
-                            <form>
-                                <hr>
-                                <h2>Passenger Details</h2>
-                                <!-- lekshmi's Code -->
-                                <!-- Passenger 1 -->
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <span class="form-label">Passenger 1 (Adult)</span>
-                                            <input class="form-control" id="pass-1-name" type="text" placeholder="Enter Passenger Name">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <span class="form-label">Passenger 1 - Date Of Birth</span>
-                                            <input class="form-control" id="pass-1-dob" type="date" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <span class="form-label">Passenger 1 - Food Preference</span>
-                                            <select class="form-control" id="pass-1-food">
-                                                <option value="Flexitarian">Flexitarian</option>
-                                                <option value="Vegetarian">Vegetarian</option>
-                                                <option value="Vegan">Vegan</option>
-                                            </select>
-                                            <span class="select-arrow"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <div class="form-checkbox">
-                                                <label for="pass-1-male">
-                                                    <input type="radio" id="pass-1-male" value="male" name="gender1">
-                                                    <span></span>Male
-                                                </label> 
-                                                <label for="pass-1-female">
-                                                    <input type="radio" id="pass-1-female" value="female" name="gender1">
-                                                    <span></span>Female
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>  
-                                </div>
-                                <!-- Passenger 2 -->
-                                <hr>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <span class="form-label">Passenger 2 (Adult)</span>
-                                            <input class="form-control" id="pass-2-name" type="text" placeholder="Enter Passenger Name">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <span class="form-label">Passenger 2 - Date Of Birth</span>
-                                            <input class="form-control" id="pass-2-dob" type="date" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <span class="form-label">Passenger 2 - Food Preference</span>
-                                            <select class="form-control" id="pass-2-food">
-                                                <option value="Flexitarian">Flexitarian</option>
-                                                <option value="Vegetarian">Vegetarian</option>
-                                                <option value="Vegan">Vegan</option>
-                                            </select>
-                                            <span class="select-arrow"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <div class="form-checkbox">
-                                                <label for="pass-2-male">
-                                                    <input type="radio" id="pass-2-male" value="male" name="gender2">
-                                                    <span></span>Male
-                                                </label> 
-                                                <label for="pass-2-female">
-                                                    <input type="radio" id="pass-2-female" value="female" name="gender2">
-                                                    <span></span>Female
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>  
-                                </div>
-                                <!-- Passenger 3 -->
-                                <hr>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <span class="form-label">Passenger 3 (Child)</span>
-                                            <input class="form-control" id="pass-3-name" type="text" placeholder="Enter Passenger Name">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <span class="form-label">Passenger 3 - Date Of Birth</span>
-                                            <input class="form-control" id="pass-3-dob" type="date" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <span class="form-label">Passenger 3 - Food Preference</span>
-                                            <select class="form-control" id="pass-3-food">
-                                                <option value="Flexitarian">Flexitarian</option>
-                                                <option value="Vegetarian">Vegetarian</option>
-                                                <option value="Vegan">Vegan</option>
-                                            </select>
-                                            <span class="select-arrow"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <div class="form-checkbox">
-                                                <label for="pass-3-male">
-                                                    <input type="radio" id="pass-3-male" value="male" name="gender3">
-                                                    <span></span>Male
-                                                </label> 
-                                                <label for="pass-3-female">
-                                                    <input type="radio" id="pass-3-female" value="female" name="gender3">
-                                                    <span></span>Female
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>  
-                                </div>
-                                <!-- Passenger 4 -->
-                                <hr>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <span class="form-label">Passenger 4 (Child)</span>
-                                            <input class="form-control" id="pass-4-name" type="text" placeholder="Enter Passenger Name">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <span class="form-label">Passenger 4 - Date Of Birth</span>
-                                            <input class="form-control" id="pass-4-dob" type="date" required>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <span class="form-label">Passenger 4 - Food Preference</span>
-                                            <select class="form-control" id="pass-4-food">
-                                                <option value="Flexitarian">Flexitarian</option>
-                                                <option value="Vegetarian">Vegetarian</option>
-                                                <option value="Vegan">Vegan</option>
-                                            </select>
-                                            <span class="select-arrow"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-3">
-                                        <div class="form-group">
-                                            <div class="form-checkbox">
-                                                <label for="pass-4-male">
-                                                    <input type="radio" id="pass-4-male" value="male" name="gender4">
-                                                    <span></span>Male
-                                                </label> 
-                                                <label for="pass-4-female">
-                                                    <input type="radio" id="pass-4-female" value="female" name="gender4">
-                                                    <span></span>Female
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>  
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-12">
-                                        <div class="form-btn">
-                                            <button class="submit-btn" id="passenger-btn">Confirm Passengers</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
-                    </section>
-                    <section class="page-section booking-form" id="payment-details">
-                        <form>
-                                <!-- Sandeep's Code -->
-                                <h2>Payment and Contact Details</h2>
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <span class="form-label">Name</span>
-                                            <input class="form-control" type="text" placeholder="Enter Full name">
-                                        </div>
-                                    </div>
-                                </div>  
-                                <div class="row">
-                                    <div class="col-md-8">
-                                        <div class="form-group">
-                                            <span class="form-label">Address</span>
-                                            <input class="form-control" type="text" placeholder="Enter Street address">
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="form-group">
-                                            <span class="form-label">State</span>
-                                            <select class="form-control" id="pay-state">
-                                                <option value="ACT">ACT</option>
-                                                <option value="NSW">NSW</option>
-                                                <option value="NT">NT</option>
-                                                <option value="QLD">QLD</option>
-                                                <option value="TAS">TAS</option>
-                                                <option value="WA">WA</option>
-                                                <option value="NA">NA</option>
-                                            </select>
-                                            <span class="select-arrow"></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-2">
-                                        <div class="form-group">
-                                            <span class="form-label">Postcode</span>
-                                            <input class="form-control" type="text" placeholder="Enter Postcode">
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <span class="form-label">Phone</span>
-                                            <input class="form-control" type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>                                                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <span class="form-label">email</span>
-                                            <input class="form-control" type="email" id="email" pattern=".+@.*\.com" size="30" required>                                    </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <span class="form-label">Payment type</span>
-                                            <select class="form-control">
-                                                <option>Debit</option>
-                                                <option>Credit</option>
-                                                <option>Bank transfer</option>
-                                                </select>
-                                            <span class="select-arrow"></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row">    
-                                    <div class="col-md-12">
-                                        <div class="form-btn">
-                                            <button class="submit-btn" id="payment-btn">Make Payment</button>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
+        <div class="wrap container-fluid">
+            <section class="page-section booking-form" id="flight-details">
+                <form>
+                    <!-- Leigh's Code -->
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <div class="box">
+                                <h2>Flight Details</h2>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div> 
-    </div>   
+                    <div class="row">
+                        <!-- radio buttons -->
+                        <div class="col-xs-6">
+                            <div class="box">
+                                <div class="form-group">
+                                    <div class="form-checkbox">
+                                        <label for="one-way">
+                                        <input type="radio" id="one-way" value="one-way" name="flight-type" onchange="hideReturnDest()" checked>
+                                        <span></span>One way 
+                                        </label>    
+                                        <label for="return">
+                                        <input type="radio" id="return" value="return" name="flight-type" onchange="displayReturnDest()">
+                                        <span></span>Return
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <span class="form-label">No. of Adults (18+)</span>
+                                <select class="form-control" id="adults-travelling">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <span class="select-arrow"></span>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <span class="form-label">No. of Children (0-17)</span>
+                                <select class="form-control" id="children-travelling">
+                                    <option value="0">0</option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                                <span class="select-arrow"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <span class="form-label">Flying from</span>
+                                <input class="form-control" type="text" placeholder="City or airport" required>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <span class="form-label">Flying to</span>
+                                <input class="form-control" type="text" placeholder="City or airport" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <span class="form-label">Departing</span>
+                                <input class="form-control" type="date" required>
+                            </div>
+                        </div>
+                        <div class="col-md-3" id="returning">
+                            <div class="form-group">
+                                <span class="form-label">Returning</span>
+                                <input class="form-control" type="date" required>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <span class="form-label">Travel class</span>
+                                <select class="form-control">
+                                    <option>Economy class</option>
+                                    <option>Business class</option>
+                                    <option>First class</option>
+                                </select>
+                                <span class="select-arrow"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-btn">
+                                <button class="submit-btn" id="flight-btn">Book Flight</button>
+                            </div>
+                        </div>  
+                    </div>
+                </form>
+            </section>
+            <section class="page-section booking-form" id="passenger-details">
+                <form>
+                    <hr>
+                    <h2>Passenger Details</h2>
+                    <!-- lekshmi's Code -->
+                    <!-- Adult 1 -->
+                    <div id="adult-1">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <span class="form-label">Passenger 1 (Adult)</span>
+                                    <input class="form-control" id="adult-1-name" type="text" placeholder="Enter Passenger Name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Passenger 1 - Date Of Birth</span>
+                                    <input class="form-control" id="adult-1-dob" type="date" required>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Passenger 1 - Food Preference</span>
+                                    <select class="form-control" id="adult-1-food">
+                                        <option value="Non-Vegetarian">Non-Vegetarian</option>
+                                        <option value="Vegetarian">Vegetarian</option>
+                                    </select>
+                                    <span class="select-arrow"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" >
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <div class="form-checkbox">
+                                        <label for="adult-1-male">
+                                            <input type="radio" id="adult-1-male" value="male" name="gender1">
+                                            <span></span>Male
+                                        </label> 
+                                        <label for="adult-1-female">
+                                            <input type="radio" id="adult-1-female" value="female" name="gender1">
+                                            <span></span>Female
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                        <hr>
+                    </div>
+
+                    <!-- Adult 2 -->
+                    <div id="adult-2">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <span class="form-label">Passenger 2 (Adult)</span>
+                                    <input class="form-control" id="adult-2-name" type="text" placeholder="Enter Passenger Name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Passenger 2 - Date Of Birth</span>
+                                    <input class="form-control" id="adult-2-dob" type="date" required>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Passenger 2 - Food Preference</span>
+                                    <select class="form-control" id="adult-2-food">
+                                        <option value="Non-Vegetarian">Non-Vegetarian</option>
+                                        <option value="Vegetarian">Vegetarian</option>
+                                    </select>
+                                    <span class="select-arrow"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <div class="form-checkbox">
+                                        <label for="adult-2-male">
+                                            <input type="radio" id="adult-2-male" value="male" name="gender2">
+                                            <span></span>Male
+                                        </label> 
+                                        <label for="adult-2-female">
+                                            <input type="radio" id="adult-2-female" value="female" name="gender2">
+                                            <span></span>Female
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                        <hr>
+                    </div>
+                    <!-- Adult 3 -->
+                    <div id="adult-3">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <span class="form-label">Passenger 3 (Adult)</span>
+                                    <input class="form-control" id="adult-3-name" type="text" placeholder="Enter Passenger Name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Passenger 3 - Date Of Birth</span>
+                                    <input class="form-control" id="adult-3-dob" type="date" required>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Passenger 3 - Food Preference</span>
+                                    <select class="form-control" id="adult-3-food">
+                                        <option value="Non-Vegetarian">Non-Vegetarian</option>
+                                        <option value="Vegetarian">Vegetarian</option>
+                                    </select>
+                                    <span class="select-arrow"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <div class="form-checkbox">
+                                        <label for="adult-3-male">
+                                            <input type="radio" id="adult-3-male" value="male" name="gender3">
+                                            <span></span>Male
+                                        </label> 
+                                        <label for="adult-3-female">
+                                            <input type="radio" id="adult-3-female" value="female" name="gender3">
+                                            <span></span>Female
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                        <hr>
+                    </div>
+
+                    <!-- Adult 4 -->
+                    <div id="adult-4">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <span class="form-label">Passenger 4 (Adult)</span>
+                                    <input class="form-control" id="adult-4-name" type="text" placeholder="Enter Passenger Name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Passenger 4 - Date Of Birth</span>
+                                    <input class="form-control" id="adult-4-dob" type="date" required>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Passenger 4 - Food Preference</span>
+                                    <select class="form-control" id="adult-4-food">
+                                        <option value="Non-Vegetarian">Non-Vegetarian</option>
+                                        <option value="Vegetarian">Vegetarian</option>
+                                    </select>
+                                    <span class="select-arrow"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <div class="form-checkbox">
+                                        <label for="adult-4-male">
+                                            <input type="radio" id="adult-4-male" value="male" name="gender4">
+                                            <span></span>Male
+                                        </label> 
+                                        <label for="adult-4-female">
+                                            <input type="radio" id="adult-4-female" value="female" name="gender4">
+                                            <span></span>Female
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                        <hr>
+                    </div>
+
+                    <!-- Child 1 -->
+                    <div id="child-1">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <span class="form-label">Passenger 1 (Child)</span>
+                                    <input class="form-control" id="child-1-name" type="text" placeholder="Enter Passenger Name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Passenger 1 (Child) - Date Of Birth</span>
+                                    <input class="form-control" id="child-1-dob" type="date" required>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Passenger 1 (Child) - Food Preference</span>
+                                    <select class="form-control" id="child-1-food">
+                                        <option value="Non-Vegetarian">Non-Vegetarian</option>
+                                        <option value="Vegetarian">Vegetarian</option>
+                                    </select>
+                                    <span class="select-arrow"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <div class="form-checkbox">
+                                        <label for="child-1-male">
+                                            <input type="radio" id="child-1-male" value="male" name="gender-child-1">
+                                            <span></span>Male
+                                        </label> 
+                                        <label for="child-1-female">
+                                            <input type="radio" id="child-1-female" value="female" name="gender-child-1">
+                                            <span></span>Female
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                        <hr>
+                    </div>
+                    <!-- Child 2 -->
+                    <div id="child-2">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <span class="form-label">Passenger 2 (Child)</span>
+                                    <input class="form-control" id="child-2-name" type="text" placeholder="Enter Passenger Name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Passenger 2 (Child) - Date Of Birth</span>
+                                    <input class="form-control" id="child-2-dob" type="date" required>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Passenger 2 (Child) - Food Preference</span>
+                                    <select class="form-control" id="child-2-food">
+                                        <option value="Non-Vegetarian">Non-Vegetarian</option>
+                                        <option value="Vegetarian">Vegetarian</option>
+                                    </select>
+                                    <span class="select-arrow"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <div class="form-checkbox">
+                                        <label for="child-2-male">
+                                            <input type="radio" id="child-2-male" value="male" name="gender-child-2">
+                                            <span></span>Male
+                                        </label> 
+                                        <label for="child-2-female">
+                                            <input type="radio" id="child-2-female" value="female" name="gender-child-2">
+                                            <span></span>Female
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                        <hr>
+                    </div>
+                    <!-- Child 3 -->
+                    <div id="child-3">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <span class="form-label">Passenger 3 (Child)</span>
+                                    <input class="form-control" id="child-3-name" type="text" placeholder="Enter Passenger Name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Passenger 3 (Child) - Date Of Birth</span>
+                                    <input class="form-control" id="child-3-dob" type="date" required>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Passenger 3 (Child) - Food Preference</span>
+                                    <select class="form-control" id="child-3-food">
+                                        <option value="Non-Vegetarian">Non-Vegetarian</option>
+                                        <option value="Vegetarian">Vegetarian</option>
+                                    </select>
+                                    <span class="select-arrow"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <div class="form-checkbox">
+                                        <label for="child-3-male">
+                                            <input type="radio" id="child-3-male" value="male" name="gender-child-3">
+                                            <span></span>Male
+                                        </label> 
+                                        <label for="child-3-female">
+                                            <input type="radio" id="child-3-female" value="female" name="gender-child-3">
+                                            <span></span>Female
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                        <hr>
+                    </div>
+                    <!-- Child 4 -->
+                    <div id="child-4">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <span class="form-label">Passenger 4 (Child)</span>
+                                    <input class="form-control" id="child-4-name" type="text" placeholder="Enter Passenger Name" required>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Passenger 4 (Child) - Date Of Birth</span>
+                                    <input class="form-control" id="child-4-dob" type="date" required>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Passenger 4 (Child) - Food Preference</span>
+                                    <select class="form-control" id="child-4-food">
+                                        <option value="Non-Vegetarian">Non-Vegetarian</option>
+                                        <option value="Vegetarian">Vegetarian</option>
+                                    </select>
+                                    <span class="select-arrow"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <div class="form-checkbox">
+                                        <label for="child-4-male">
+                                            <input type="radio" id="child-4-male" value="male" name="gender-child-4">
+                                            <span></span>Male
+                                        </label> 
+                                        <label for="child-4-female">
+                                            <input type="radio" id="child-4-female" value="female" name="gender-child-4">
+                                            <span></span>Female
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                        <hr>
+                    </div>
+                    <!-- Submit and initiate validation -->
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-btn">
+                                <button class="submit-btn" id="passenger-btn">Confirm Passengers</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <section class="page-section booking-form" id="payment-details">
+                    <form>
+                        <!-- Sandeep's Code -->
+                        <h2>Payment and Contact Details</h2>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <span class="form-label">Name</span>
+                                    <input class="form-control" id="payment-name" type="text" placeholder="Enter Full name" required>
+                                </div>
+                            </div>
+                        </div>  
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <span class="form-label">Address</span>
+                                    <input class="form-control" id="payment-address" type="text" placeholder="Enter Street address" required>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">State</span>
+                                    <select class="form-control" id="payment-state">
+                                        <option value="ACT">ACT</option>
+                                        <option value="NSW">NSW</option>
+                                        <option value="NT">NT</option>
+                                        <option value="QLD">QLD</option>
+                                        <option value="TAS">TAS</option>
+                                        <option value="WA">WA</option>
+                                        <option value="NA">NA</option>
+                                    </select>
+                                    <span class="select-arrow"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <span class="form-label">Postcode</span>
+                                    <input class="form-control" id="postcode" type="text" placeholder="Enter Postcode" required>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <span class="form-label">Phone</span>
+                                    <input class="form-control" id="payment-phone" type="tel" name="phone" required>                                                                        
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <span class="form-label">email</span>
+                                    <input class="form-control" id="payment-email" type="email" required>                                    
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <span class="form-label">Payment type</span>
+                                    <select class="form-control" id="payment-method">
+                                        <option>Debit</option>
+                                        <option>Credit</option>
+                                        <option>Bank transfer</option>
+                                        </select>
+                                    <span class="select-arrow"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">    
+                            <div class="col-md-12">
+                                <div class="form-btn">
+                                    <button class="submit-btn" id="payment-btn">Make Payment</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+            </section>  
+        </div>
+    </div>
+    <script src="assets/js/main.js"></script>
 </body>   
 </html>
 
