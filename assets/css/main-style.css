@@ -5,19 +5,19 @@ h2 {
     padding: 10px 10px;
     margin: 30px 0px 20px;
 }
-/* #adult-1, #adult-2, #child-1, #child-2 {
+#adult-1, #adult-2, #child-1, #child-2 {
     display: none;
 } 
-
-#passenger-btn{
-    display: none;
-} */
-
 #adult-3, #adult-4, #child-3, #child-4 {
     display: none;
 }
-
+/* #passenger-btn{
+    display: none;
+} */
 #returning {
+    display: none;
+}
+#passenger-details {
     display: none;
 }
 

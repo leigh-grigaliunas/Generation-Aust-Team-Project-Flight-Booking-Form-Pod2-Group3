@@ -511,18 +511,18 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <span class="form-label">Name</span>
-                                    <input class="form-control" id="payment-name" type="text" placeholder="Enter Full name">
+                                    <input class="form-control" id="payment-name" type="text" placeholder="Enter Full name" required>
                                 </div>
                             </div>
                         </div>  
                         <div class="row">
-                            <div class="col-md-8">
+                            <div class="col-md-6">
                                 <div class="form-group">
                                     <span class="form-label">Address</span>
-                                    <input class="form-control" id="payment-address" type="text" placeholder="Enter Street address">
+                                    <input class="form-control" id="payment-address" type="text" placeholder="Enter Street address" required>
                                 </div>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-3">
                                 <div class="form-group">
                                     <span class="form-label">State</span>
                                     <select class="form-control" id="payment-state">
@@ -537,7 +537,7 @@
                                     <span class="select-arrow"></span>
                                 </div>
                             </div>
-                            <div class="col-md-2">
+                            <div class="col-md-3">
                                 <div class="form-group">
                                     <span class="form-label">Postcode</span>
                                     <input class="form-control" id="postcode" type="text" placeholder="Enter Postcode" required>
@@ -580,28 +580,7 @@
             </section>  
         </div>
     </div>
-    <script src="assets/js/main.js"></script>  
-    <script>
-        (function () {
-            'use strict'
-        
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            var forms = document.querySelectorAll('.needs-validation')
-        
-            // Loop over them and prevent submission
-            Array.prototype.slice.call(forms)
-            .forEach(function (form) {
-                form.addEventListener('submit', function (event) {
-                if (!form.checkValidity()) {
-                    event.preventDefault()
-                    event.stopPropagation()
-                }
-        
-                form.classList.add('was-validated')
-                }, false)
-            })
-        })();
-    </script> 
+    <script src="assets/js/main.js"></script>
 </body>   
 </html>
 

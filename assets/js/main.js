@@ -11,7 +11,8 @@ const paymentBtn = document.getElementById("payment-btn");
 const flightOneWay = document.getElementById("one-way"); 
 
 function showPassenger(type,index){
-    var div = document.getElementById(`${type}-${index}`);
+    var eleID = type + "-" + index;
+    var div = document.getElementById(eleID);
     div.style.display = 'block';
 }
 
@@ -22,36 +23,44 @@ function validatePassengerNumbers(){
         return true
     } else {
         alert('No one is travelling!');
+
     }
 }
 
 function displayPassengerInputs() {
+    const numAdult = Number(adults.options[adults.selectedIndex].value)
+    const numChild = Number(children.options[children.selectedIndex].value)
+    var divPassenger = document.getElementById("passenger-details");
+    divPassenger.style.display = 'block';
 
-    if (adults.options[adults.selectedIndex]){
-        for(let i = 0; i <= children.options[children.selectedIndex]; i++){
+    if (numAdult){
+        for(let i = 1; i <= numAdult; i++){
             showPassenger('adult',i);
         }
     }
-
-    if (children.options[children.selectedIndex]){
-        for(let i = 0; i <= children.options[children.selectedIndex]; i++){
+    if (numChild){
+        for(let i = 1; i <= numChild; i++){
             showPassenger('child',i);
         }
     }
 }
 
 function hidePassengerInputs(){
-    for(let i = 0; i <= 4;i++){
-        var divAdult = document.getElementById(`adult-${i}`);   
-        var divChild = document.getElementById(`child-${i}`); 
-        
-        if(divAdult.style.display === 'block'){
-            divAdult.style.display = 'none';
+    for(let i = 1; i <= 4;i++){
+        const idAdult = "adult-" + i;
+        const idChild = "child-" + i;
+        var divAdult = document.getElementById(idAdult);  
+        var divChild = document.getElementById(idChild); 
+
+        if(divAdult.style.display === "block"){
+            divAdult.style.display = "none";
         }
-        if(divChild.style.display === 'block'){ 
-            divChild.style.display = 'none';
+        if(divChild.style.display === "block"){ 
+            divChild.style.display = "none";
         }
     }
+    var divPassenger = document.getElementById("passenger-details");
+    divPassenger.style.display = 'none';
 }
 
 function displayReturnDest() {
@@ -183,6 +192,10 @@ flightBtn.addEventListener('click', () => {
     };
 });
 
+hiddenBtn.addEventListener('click',()=>{
+    hidePassengerInputs();
+});
+
 passengerBtn.addEventListener('click', () => {
     validNameOne()
     validNameTwo()
@@ -191,9 +204,9 @@ passengerBtn.addEventListener('click', () => {
 });
   
 paymentBtn.addEventListener('click', () => {
-    //hidePassengerInputs();
-    checkEmail();
-    validName();
-    myPhone();
+    hidePassengerInputs();
+    // checkEmail();
+    // validName();
+    // myPhone();
 });
 
