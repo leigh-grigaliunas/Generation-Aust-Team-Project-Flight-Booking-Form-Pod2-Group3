@@ -17,7 +17,7 @@ h2 {
 #returning {
     display: none;
 }
-#passenger-details {
+#passenger-details, #payment-details {
     display: none;
 }
 
