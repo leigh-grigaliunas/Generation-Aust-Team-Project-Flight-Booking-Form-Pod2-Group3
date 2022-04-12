@@ -89,7 +89,6 @@ function hidePaymentDetails(){
 function validatePassengerDOB(passType,passIndex){
     const passID = passType + "-" + passIndex + "-dob";
     let passDOB = document.getElementById(passID).value;
-    alert(passDOB);
 
     var dob = new Date(passDOB);
     //calculate month difference from current date in time
@@ -105,12 +104,13 @@ function validatePassengerDOB(passType,passIndex){
     var age = Math.abs(year - 1970);
     
     // Now access the values as below
-    if((age > 18 && type === "adult") || (age < 18 && type === "child")){
-        return true;
-    } else {
-        alert("A passsenger has entered an incorrect age. Please check and resubmit.");
-        return false;
-    }
+    // if((age > 18 && type === "adult") || (age < 18 && type === "child")){
+    //     return true;
+    // } else {
+    //     alert("A passsenger has entered an incorrect age. Please check and resubmit.");
+    //     return false;
+    // }
+    return true
 }
 
 function validatePassengerName(passType,passIndex)
