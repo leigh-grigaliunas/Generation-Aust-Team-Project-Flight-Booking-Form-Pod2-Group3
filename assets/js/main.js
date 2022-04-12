@@ -1,3 +1,5 @@
+
+
 // Leigh's JS
 
 const passengerContainer = document.getElementById("passenger-details");
@@ -84,21 +86,40 @@ function hidePaymentDetails(){
 };
 
 
+function validatePassengerDOB(passType,passIndex){
+    const passID = passType + "-" + passIndex + "-dob";
+    let passDOB = document.getElementById(passID).value;
+    alert(passDOB);
 
-// Lekshmi's JS
+    var dob = new Date(passDOB);
+    //calculate month difference from current date in time
+    var month_diff = Date.now() - dob.getTime();
+    
+    //convert the calculated difference in date format
+    var age_dt = new Date(month_diff); 
+    
+    //extract year from date    
+    var year = age_dt.getUTCFullYear();
+    
+    //now calculate the age of the user
+    var age = Math.abs(year - 1970);
+    
+    // Now access the values as below
+    if((age > 18 && type === "adult") || (age < 18 && type === "child")){
+        return true;
+    } else {
+        alert("A passsenger has entered an incorrect age. Please check and resubmit.");
+        return false;
+    }
+}
 
-// const passenger1Name = document.getElementById("pass-1-name");
-// const passenger2Name = document.getElementById("pass-2-name");
-// const passenger3Name = document.getElementById("pass-3-name");
-// const childName = document.getElementById("pass-4-name");
-
-function validatePassengerName(passID)
+function validatePassengerName(passType,passIndex)
  {
-
+    let passID = passType + "-" + passIndex + "-name";
     let userName=document.getElementById(passID).value;
     if(userName == "null" || userName == " ")
     {
-       alert('Please enter the name in the required format') ;
+       alert('Please enter the name in the required format');
        return false;
     }
     else if(userName.length<6)
@@ -108,25 +129,57 @@ function validatePassengerName(passID)
     }
     else if( userNameRegex = "[a-zA-Z]{6}")
     {
-        return userNameRegex.test(userName);
+        return true;
     }
  }
-function getPassID() {
-    const numAdult = Number(adults.options[adults.selectedIndex].value)
-    const numChild = Number(children.options[children.selectedIndex].value)
- 
+
+function validatePassengerInputs() {
+    const numAdult = Number(adults.options[adults.selectedIndex].value);
+    const numChild = Number(children.options[children.selectedIndex].value);
+    let adultNamePass = 0;
+    let childNamePass = 0;
+    let adultDOBpass = 0;
+    let childDOBPass = 0;
+
+    // validate adult passengers
     if (numAdult){
         for(let i = 1; i <= numAdult; i++){
-            validatePassengerName("adult-" + i);
+            if(validatePassengerName("adult", i)){
+                adultNamePass++;
+            }
+            if(validatePassengerDOB("adult", i)){
+                adultDOBpass++;
+            }
         }
     }
+
+    // validate children passengers
     if (numChild){
         for(let i = 1; i <= numChild; i++){
-            showPassenger("child-" + i);
+            if(validatePassengerName("child",i)){
+                childNamePass++;
+            }
+            if(validatePassengerDOB("child", i)){
+                childDOBPass++;
+            }
         }
+    }
+
+    // returns result based on all passengers
+    if ((numAdult === adultNamePass) && (numChild === childNamePass) && (numAdult === adultDOBpass)){
+        return true;
+    } else {
+        return false;
     }
 }
 
+
+// Lekshmi's JS
+
+const passenger1Name = document.getElementById("pass-1-name");
+const passenger2Name = document.getElementById("pass-2-name");
+const passenger3Name = document.getElementById("pass-3-name");
+const childName = document.getElementById("pass-4-name");
 
 function validNameOne()
  {
@@ -237,6 +290,9 @@ function checkEmail() {
 flightBtn.addEventListener('click', () => {
     if(validatePassengerNumbers()){
         displayPassengerInputs();
+    } else {
+        alert("Error in flight details.")
+        flightOneWay.focus;
     };
 });
 
@@ -245,7 +301,12 @@ passengerBtn.addEventListener('click', () => {
     // validNameTwo();
     // validNameThree();
     // validChildName();
-    displayPaymentDetails();
+    if(validatePassengerInputs()){
+        displayPaymentDetails();
+    } else {
+        alert("One or more of the passenger details have been incorrectly entered. Please check and resubmit")
+    }
+    
 });
   
 paymentBtn.addEventListener('click', () => {

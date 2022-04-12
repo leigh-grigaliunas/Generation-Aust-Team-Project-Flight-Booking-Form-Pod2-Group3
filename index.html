@@ -1,30 +1,60 @@
 <!DOCTYPE html>
-<!--Code by Divinector (www.divinectorweb.com)-->
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>How to Create responsive Homepage</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/home-style.css">    
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+	<title>Booking Form HTML Template</title>
+
+	<!-- Google font -->
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400" rel="stylesheet">
+
+	<!-- Stylesheets -->
+	<link type="text/css" rel="stylesheet" href="assets/css/form-style.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/main-style.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/flexboxgrid.css" />
+    <link type="text/css" rel="stylesheet" href="assets/css/bootstrap.min.css" />
+
+    <script src="https://kit.fontawesome.com/2db9c313b1.js" crossorigin="anonymous"></script>
+
 </head>
-<body>
-    <header>
-        <div class="wrapper">
-            <div class="logo">
-                <i class="fa-solid fa-plane-departure"></i>
-            </div>
-            <ul class="nav-area">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Deals</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+
+<body class="layout">
+    <div class="page js-page" id="booking">
+        <div class="wrap container-fluid">
+            <section class="page-section booking-form">
+                    <div class="row">
+                        <div class="col-xs-4">
+                            <div class="box" id="logo">
+                                <a href="./index.html"><h2><i class="fa-solid fa-plane-departure"></i>GenAir</h2></a>
+                            </div>
+                        </div>
+                        <div class="col-xs-8 push">
+                            <nav>                        
+                                <ul class="nav-area">
+                                    <li><a href="./index.html">Home</a></li>
+                                    <li><a href="#">About</a></li>
+                                    <li><a href="#">Services</a></li>
+                                    <li><a href="./booking.html">Book Now</a></li>
+                                    <li><a href="#">Contact</a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+            </section>
+            <section class="page-section booking-form">
+                <div class="row center-xs">
+                    <div class="col-xs-8">
+                        <div class="box welcome-text">
+                            <h1>Travel the World<br><span>With Us</span></h1>
+                            <a href="./booking.html">Book Now</a>
+                        </div>
+                    </div>
+                </div>           
+            </section>
         </div>
-        <div class="welcome-text">
-            <h1>Travel the World <span>With Us</span></h1>
-            <a href="./booking.html">Book Now</a>
-        </div>
-    </header>
+    </div>
 </body>
 </html>
