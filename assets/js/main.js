@@ -59,6 +59,10 @@ function displayReturnDest() {
     targetDiv.style.display = "block";
 };
 
+function hideReturnDest() {
+    const targetDiv = document.getElementById("returning");
+    targetDiv.style.display = "none";
+};
 
 // Lekshmi's JS
 
