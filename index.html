@@ -49,7 +49,7 @@
                                             <div class="form-group">
                                                 <div class="form-checkbox">
                                                     <label for="one-way">
-                                                    <input type="radio" id="one-way" value="one-way" name="flight-type" checked>
+                                                    <input type="radio" id="one-way" value="one-way" name="flight-type">
                                                     <span></span>One way 
                                                     </label>    
                                                     <label for="return">
@@ -65,8 +65,8 @@
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <span class="form-label">No. of Adults (18+)</span>
-                                            <select class="form-control" id="adults">
-                                                <option value="0">Adults</option>
+                                            <select class="form-control" id="adults-travelling">
+                                                <option value="0"> No. Of Adults</option>
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
                                             </select>
@@ -76,8 +76,8 @@
                                     <div class="col-md-3">
                                         <div class="form-group">
                                             <span class="form-label">No. of Children (0-17)</span>
-                                            <select class="form-control" id="children">
-                                                <option value="0">Children</option>
+                                            <select class="form-control" id="children-travelling">
+                                                <option value="0">No. of Children</option>
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
                                             </select>
@@ -89,13 +89,13 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <span class="form-label">Flying from</span>
-                                            <input class="form-control" type="text" placeholder="City or airport">
+                                            <input class="form-control" type="text" placeholder="City or airport" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <span class="form-label">Flying to</span>
-                                            <input class="form-control" type="text" placeholder="City or airport">
+                                            <input class="form-control" type="text" placeholder="City or airport" required>
                                         </div>
                                     </div>
                                 </div>
