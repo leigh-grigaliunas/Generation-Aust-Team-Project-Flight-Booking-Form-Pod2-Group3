@@ -22,3 +22,11 @@ Considerations:
 
 The team has agreed to focus on the main booking form initially. If we get through that in a timely manner, we'll look at adding in a signup and/or login page.
 
+**Final Presentation**
+
+We did it! Woo hoo. A little stressful, but the job got done in the end. 
+
+https://docs.google.com/presentation/d/1JeiFZOHpcCBc0f7C0wlQ8vjGOA7IMV82ed2lbc4YC58/edit#slide=id.p
+
+Also included in ./assets/docs in pdf form
+
